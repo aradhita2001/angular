@@ -1,0 +1,45 @@
+<div [class] = "light? 'light' : 'dark'" #div>
+    <p>{{ varpc }}</p>
+    <p>{{ varpc2 }}</p>
+
+    <button (click) = 'sendMessage()'>Send</button>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <button (click) = changeTheme()>theme</button>
+    <p>login works!</p>
+    <p>{{title}}</p>
+    
+    <!-- <p style="color: {{ red }}">{{ {ele : "val"}["ele"] }}</p> -->
+    <p>{{[10,23][1]}}</p>
+    <p>{{4+5}}</p>
+    
+    <img src="{{ imgurl }}" alt="issue loading" width="500px">
+    <img [src]="imgurl" alt="df" width="500px">
+    
+    <h1 class="colorblue">Normal css</h1>
+    <h1 [class.colorblue] = "changeColor"> class binding</h1>
+    <h1 [style.color] = "changeColor ? 'green' : 'red'">style binding</h1>
+    
+    <button (click) = "buttonClick()">click here</button>
+    <br>
+    <br>
+    <input type="text" (keyup) = onKeyup()> 
+
+    <br>
+    <br>
+    <input type="text" (keyup) = onKeyUp($event)>
+
+    <br>
+    <br>
+    <input type="text" (keyup.shift) = onKeyup()>
+
+    <br>
+    <br>
+    <input type="text" (keydown.a) = onEnter(input.value) #input>
+
+    <input type="text" [(ngModel)]="oneWayData" (keyup.enter)="onKey()">
+</div>

@@ -1,0 +1,9 @@
+<p>page-with-array works!</p>
+
+<ol>
+    <li *ngFor="let item of arr;let i = index">{{ item.name }}
+    <button [routerLink]="['/array', i]" routerLinkActive="router-link-active"  >id</button>
+    <button [routerLink]="['/array', i, item.name]" routerLinkActive="router-link-active">id-name</button>
+
+</li>
+</ol>

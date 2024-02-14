@@ -1,0 +1,14 @@
+<p>switch works!</p>
+
+<button (click)="clicked(b1)" #b1>button 1</button>
+<button (click)="clicked(b2)" #b2>button 2</button>
+<button (click)="clicked(b3)" #b3>button 3</button>
+
+<div [ngSwitch]="buttonMessage" [ngStyle]="{color: 'blue'}">
+    <div *ngSwitchCase="'button 1'">You clicked button 1</div>
+    <div *ngSwitchCase="'button 2'">You clicked button 2</div>
+    <div *ngSwitchCase="'button 3'">You clicked button 3</div>
+    <div *ngSwitchDefault>you just opened</div>
+</div>
+
+<p>Clicked : {{buttonMessage}}</p>

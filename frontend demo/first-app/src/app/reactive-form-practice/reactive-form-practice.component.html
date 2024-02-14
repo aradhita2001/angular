@@ -1,0 +1,40 @@
+<p>reactive-form-practice works!</p>
+<div class="container-mt5">
+    <div class="form-area">
+        <form [formGroup]="form" (ngSubmit)="onRegister()" >
+            <div class="form-group">
+                <label for="firstname">First Name  :</label>
+                <input class="form-control" type="text" formControlName="firstName">
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name  :</label>
+                <input class="form-control" type="text" formControlName="lastName">
+            </div>
+            <div class="form-group">
+                <label for="country"></label>
+                <select class="form-control" >
+                    <option value="india">India</option>
+                    <option value="italy">Italy</option>
+                    <option value="spain">Spain</option>
+                    <option value="finland">Finland</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender: </label>
+                <input class="form-control" type="radio" value="male"> Male
+                <input class="form-control" type="radio" value="female"> Female
+                <input class="form-control" type="radio" value="trans"> Trans
+            </div>
+            <div class="form-group">
+                <label >Hobbies</label>
+                <input class="form-control" type="checkbox" value="sports"> sports
+                <input class="form-control" type="checkbox" value="tech"> Tech
+                <input class="form-control" type="checkbox" value="arts"> Arts
+            </div>
+
+            <button type="submit" [disabled]="!form.valid">
+                Save
+            </button>
+        </form>
+    </div>
+</div>

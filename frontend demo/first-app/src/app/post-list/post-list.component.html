@@ -1,0 +1,9 @@
+<p>post-list works!</p>
+
+<div *ngFor="let post of posts; let i=index">
+    <h4>{{ post.postTitle }}</h4>
+    <button [routerLink]="['/posts', i]" routerLinkActive="router-link-active" >details</button>
+    
+</div>
+
+<button (click)="onAdd()">Add Post</button>
